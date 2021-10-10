@@ -1,0 +1,503 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/styles.cshtml";
+}
+
+
+
+
+<nav class="nav navbar-dark bg-dark" style="margin-top:30px;  text-align:center; justify-content:center"  >
+
+    <span class="navbar-brand m-md-0 h1  " style="text-align:center;"><h2 style="font-size:30px; font-style:italic; padding:0px;"> Point Of Sale</h2></span>
+
+
+
+</nav>
+
+
+
+<div class="row">
+    <div class="col-sm-3">
+
+        <div class="container">
+
+            <div class="list-group-item list-group-item-action active">
+
+                Item
+
+
+            </div>
+
+            <div class="panel-body  bg-dark" style="color:white">
+
+                <form id="frm-project">
+
+                    <div class="panel-body  bg-dark" style="color:white">
+
+
+                        <table class="table table-bordered" style="color:white">
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="Pizza" />
+                                    <label>Pizza</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="Burger" />
+                                    <label>Burger</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="Sandwitch" />
+                                    <label>Sandwitch</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+
+
+
+
+
+
+                        </table>
+
+
+
+
+                    </div>
+
+
+                </form>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="col-sm-3">
+
+        <div class="container">
+
+            <div class="list-group-item list-group-item-action active">
+
+                Item
+
+
+            </div>
+
+            <div class="panel-body  bg-dark" style="color:white">
+
+                <form id="frm-project">
+
+                    <div class="panel-body  bg-dark" style="color:white">
+
+
+                        <table class="table table-bordered" style="color:white">
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="MilkShake" />
+                                    <label>MilkShake</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="Tea" />
+                                    <label>Tea</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="Sprite" />
+                                    <label>Sprite</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" name="pos" value="MangoJuice" />
+                                    <label>MangoJuice</label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="number" name="qty" id="qty" size="10px" />
+
+
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" align="right">
+
+                                    <input type="button" value="Add" onclick="Add()" class="btn btn-info" />
+
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                        </table>
+
+
+
+
+                    </div>
+
+
+                </form>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="col-sm-4">
+
+
+        <div class="container">
+
+            <div class="list-group-item list-group-item-action active">
+
+                Add Products
+
+
+            </div>
+
+            <table id="tbl-item" class="table table-bordered" cellpadding="0" width="100%" align="center">
+
+                <thead>
+                    <tr>
+
+                        <td>Delete</td>
+                        <td>Item</td>
+                        <td>Price</td>
+                        <td>Qty</td>
+                        <td>Total</td>
+
+
+
+
+
+                    </tr>
+
+
+
+
+
+                </thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="col-sm-2">
+        <div class="container">
+
+            <div class="list-group-item list-group-item-action active">
+
+                Bill
+
+
+            </div>
+
+            <div>
+                <label>Total</label>
+                <input type="text" style="color:springgreen; background:black;  font-size:30px;" id="total" name="total" placeholder="Total" required />
+
+
+
+            </div>
+
+
+            <div>
+
+                <input type="button" class="btn btn-info" id="reset" name="reset" id="reset" value="Reset" />
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+@section Scripts{
+
+    @*    <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+        var total = 0;
+        var tot = 0;
+
+    function Add() {
+
+   
+
+
+
+        $("input[name='pos']:checked").each(function () {
+
+
+            let check = $(this).val();
+         var price = null;
+
+
+            if (check == "Pizza") {
+
+                price = 1000;
+
+
+            }
+
+
+            else if (check == "Burger") {
+
+                price = 250;
+
+            }
+
+
+
+            else if (check == "Sandwitch") {
+
+                price = 100;
+
+            }
+
+            else if (check == "MilkShake") {
+
+                price = 70;
+
+            }
+
+            else if (check == "Tea") {
+
+                price = 30;
+
+            }
+
+            else if (check == "Sprite") {
+
+                price = 110;
+
+            }
+
+            else if (check == "MangoJuice") {
+
+                price = 170;
+
+            }
+
+            var qty = $(this).closest("tr").find('[name="qty"]').val() || 0;
+            tot = qty * price;
+
+
+            var table =
+                "<tr>" +
+                "<td><button type='button' name='record' class='btn btn-danger' onclick='deleterow(this)' >Delete</td>  " +
+
+                "<td>" + check + "</td>" +
+
+                "<td>" + price + "</td>" +
+
+                "<td>" + qty + "</td>" +
+
+                "<td>" + tot + "</td>" +
+
+
+
+                "</tr>";
+
+
+
+            total += Number(tot);
+
+            $("#total").val(total);
+
+            $("#tbl-item tbody").append(table);
+
+
+        });
+
+    }
+
+
+
+
+        function deleterow(e) {
+
+            totalcost = parseInt($(e).parent().parent().find("td:last").text(), 10);
+
+            total -= totalcost;
+            $("#total").val(total);
+            $(e).parent().parent().remove();
+
+
+        }
+
+        $("#reset").click(function () {
+
+
+
+            location.reload();
+
+
+        })
+
+
+
+
+    </script>
+
+
+
+
+}
