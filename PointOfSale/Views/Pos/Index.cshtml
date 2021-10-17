@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "View";
     Layout = "~/Views/Shared/styles.cshtml";
 }
@@ -7,7 +6,7 @@
 
 
 
-<nav class="nav navbar-dark bg-dark" style="margin-top:30px;  text-align:center; justify-content:center"  >
+<nav class="nav navbar-dark bg-dark" style="margin-top:30px;  text-align:center; justify-content:center">
 
     <span class="navbar-brand m-md-0 h1  " style="text-align:center;"><h2 style="font-size:30px; font-style:italic; padding:0px;"> Point Of Sale</h2></span>
 
@@ -23,7 +22,7 @@
         <div class="container">
 
             <div class="list-group-item list-group-item-action active">
-
+          
                 Item
 
 
@@ -379,7 +378,6 @@
 
     function Add() {
 
-   
 
 
 
@@ -387,7 +385,7 @@
 
 
             let check = $(this).val();
-         var price = null;
+           var price = null;
 
 
             if (check == "Pizza") {
@@ -457,7 +455,6 @@
                 "</tr>";
 
 
-
             total += Number(tot);
 
             $("#total").val(total);
@@ -484,6 +481,7 @@
         }
 
         $("#reset").click(function () {
+
 
 
 
